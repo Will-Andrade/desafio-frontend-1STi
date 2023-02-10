@@ -3,10 +3,10 @@ import FormBox from "./FormBox.component";
 
 describe('FormBox component', () => {
   it('should render a form with a single input', () => {
-    render(<FormBox />);
+    render(<FormBox getCityWeather={jest.fn()} />);
 
     const formBox = screen.getByTestId('form-box');
 
     expect(formBox).toBeInTheDocument();
-  })
+  });
 });
